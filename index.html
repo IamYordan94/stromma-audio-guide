@@ -131,15 +131,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Ar
       </ul>
     </div>
 
-    <div class="actions">
-      <div class="row">
-        <a id="btn-fb" class="btn btn--outline" href="#" target="_blank" rel="noopener" data-i18n="fb">Connect to Facebook</a>
-        <a id="btn-ig" class="btn btn--outline" href="#" target="_blank" rel="noopener" data-i18n="ig">Connect to Instagram</a>
-      </div>
-      <p class="panel-title" style="margin:18px 0 8px;text-align:center" data-i18n="review">How was your tour?</p>
-      <a id="btn-survey" class="btn" href="#" target="_blank" rel="noopener" data-i18n="survey">Connect to Survey</a>
-    </div>
-
     <footer class="footer">
       <p class="enjoy" data-i18n="enjoy">Enjoy your tour!</p>
       <span class="logo"><img src="stromma-logo.svg" alt="Stromma"></span>
@@ -148,12 +139,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Ar
 </div>
 
 <script>
-const CONFIG = {
-  INSTAGRAM: "https://www.instagram.com/strommanl/",
-  FACEBOOK: "https://www.facebook.com/@StrommaNL",
-  SURVEY: "https://www.netigate.se/ra/s.aspx?s=1145408X389466567X40853",
-};
-
 const LANGS = [
 {"code":"en","name":"English","en":"English"},
 {"code":"nl","name":"Nederlands","en":"Dutch"},
@@ -177,25 +162,291 @@ const LANGS = [
 ];
 
 const STRINGS = {
-"en":{"chooseLang":"Choose your language","appName":"Audio Guide","byod":"Bring Your Own Device (BYOD)","panelTitle":"Your Personal Audio Guide","step1Title":"Connect to WiFi","step2Title":"Connect to Audio Guide","scanDesc":"Scan QR-code on board to connect","etiquetteTitle":"Good to know","etiquette1":"If you have earphones please use them.","etiquette2":"Using speaker?","etiquette3":"Keep your device close to your ear.","etiquette4":"Please keep the volume low.","fb":"Connect to Facebook","ig":"Connect to Instagram","review":"How was your tour?","survey":"Connect to Survey","enjoy":"Enjoy your tour!"},
-"nl":{"chooseLang":"Kies je taal","appName":"Audiogids","byod":"Gebruik je eigen toestel (BYOD)","panelTitle":"Je persoonlijke audiogids","step1Title":"Verbind met wifi","step2Title":"Verbind met de audiogids","scanDesc":"Scan de QR-code aan boord om te verbinden","etiquetteTitle":"Goed om te weten","etiquette1":"Heb je oortjes? Gebruik ze alsjeblieft.","etiquette2":"Gebruik je de luidspreker?","etiquette3":"Houd je toestel dicht bij je oor.","etiquette4":"Zet het volume alsjeblieft laag.","fb":"Verbind met Facebook","ig":"Verbind met Instagram","review":"Hoe was je tour?","survey":"Verbind met de enquête","enjoy":"Geniet van je tour!"},
-"de":{"chooseLang":"Sprache wählen","appName":"Audioguide","byod":"Eigenes Gerät mitbringen (BYOD)","panelTitle":"Ihr persönlicher Audioguide","step1Title":"Mit WLAN verbinden","step2Title":"Mit dem Audioguide verbinden","scanDesc":"QR-Code an Bord scannen, um sich zu verbinden","etiquetteTitle":"Gut zu wissen","etiquette1":"Wenn Sie Kopfhörer haben, nutzen Sie diese bitte.","etiquette2":"Lautsprecher?","etiquette3":"Halten Sie Ihr Gerät nah ans Ohr.","etiquette4":"Halten Sie die Lautstärke bitte niedrig.","fb":"Mit Facebook verbinden","ig":"Mit Instagram verbinden","review":"Wie war Ihre Tour?","survey":"Mit der Umfrage verbinden","enjoy":"Viel Spaß bei Ihrer Tour!"},
-"fr":{"chooseLang":"Choisissez votre langue","appName":"Audioguide","byod":"Apportez votre appareil (BYOD)","panelTitle":"Votre audioguide personnel","step1Title":"Connectez-vous au Wi-Fi","step2Title":"Connectez-vous à l'audioguide","scanDesc":"Scannez le QR-code à bord pour vous connecter","etiquetteTitle":"Bon à savoir","etiquette1":"Si vous avez des écouteurs, utilisez-les, merci.","etiquette2":"Haut-parleur ?","etiquette3":"Gardez votre appareil près de l'oreille.","etiquette4":"Gardez le volume bas, merci.","fb":"Connectez-vous à Facebook","ig":"Connectez-vous à Instagram","review":"Votre avis sur la visite ?","survey":"Connectez-vous à l'enquête","enjoy":"Profitez de votre visite !"},
-"es":{"chooseLang":"Elige tu idioma","appName":"Audioguía","byod":"Trae tu propio dispositivo (BYOD)","panelTitle":"Tu audioguía personal","step1Title":"Conéctate al wifi","step2Title":"Conéctate a la audioguía","scanDesc":"Escanea el código QR a bordo para conectarte","etiquetteTitle":"A tener en cuenta","etiquette1":"Si tienes auriculares, úsalos, por favor.","etiquette2":"¿Usas el altavoz?","etiquette3":"Mantén el dispositivo cerca del oído.","etiquette4":"Mantén el volumen bajo, por favor.","fb":"Conéctate a Facebook","ig":"Conéctate a Instagram","review":"¿Qué tal el recorrido?","survey":"Conéctate a la encuesta","enjoy":"¡Disfruta del recorrido!"},
-"it":{"chooseLang":"Scegli la lingua","appName":"Audioguida","byod":"Porta il tuo dispositivo (BYOD)","panelTitle":"La tua audioguida personale","step1Title":"Connettiti al Wi-Fi","step2Title":"Connettiti all'audioguida","scanDesc":"Scansiona il codice QR a bordo per connetterti","etiquetteTitle":"Buono a sapersi","etiquette1":"Se hai gli auricolari, usali per favore.","etiquette2":"Usi l'altoparlante?","etiquette3":"Tieni il dispositivo vicino all'orecchio.","etiquette4":"Tieni il volume basso, per favore.","fb":"Connettiti a Facebook","ig":"Connettiti a Instagram","review":"Com'è andato il tour?","survey":"Connettiti al sondaggio","enjoy":"Buon tour!"},
-"pt":{"chooseLang":"Escolha o seu idioma","appName":"Audioguia","byod":"Traga o seu dispositivo (BYOD)","panelTitle":"O seu audioguia pessoal","step1Title":"Ligue-se ao Wi-Fi","step2Title":"Ligue-se ao audioguia","scanDesc":"Digitalize o código QR a bordo para se ligar","etiquetteTitle":"Bom saber","etiquette1":"Se tiver auscultadores, use-os, por favor.","etiquette2":"Usar o altifalante?","etiquette3":"Mantenha o dispositivo perto do ouvido.","etiquette4":"Mantenha o volume baixo, por favor.","fb":"Ligue-se ao Facebook","ig":"Ligue-se ao Instagram","review":"Como foi o seu passeio?","survey":"Ligue-se ao inquérito","enjoy":"Aproveite o passeio!"},
-"zh":{"chooseLang":"选择语言","appName":"语音导览","byod":"使用您的自带设备 (BYOD)","panelTitle":"您的个人语音导览","step1Title":"连接 WiFi","step2Title":"连接语音导览","scanDesc":"扫描船上二维码进行连接","etiquetteTitle":"温馨提示","etiquette1":"如有耳机，请使用耳机。","etiquette2":"使用扬声器时？","etiquette3":"请将设备靠近耳边。","etiquette4":"请保持音量适中。","fb":"连接 Facebook","ig":"连接 Instagram","review":"您的游览体验如何？","survey":"连接问卷","enjoy":"祝您旅途愉快！"},
-"yue":{"chooseLang":"選擇你的語言","appName":"語音導覽","byod":"自攜裝置（BYOD）","panelTitle":"你的個人語音導覽","step1Title":"連接 Wi-Fi","step2Title":"連接語音導覽","scanDesc":"掃描船上二維碼以連接","etiquetteTitle":"溫馨提示","etiquette1":"如有耳機，請使用耳機。","etiquette2":"使用揚聲器？","etiquette3":"請將裝置靠近耳邊。","etiquette4":"請保持音量適中。","fb":"連接 Facebook","ig":"連接 Instagram","review":"你的旅程如何？","survey":"連接問卷","enjoy":"祝你旅途愉快！"},
-"ja":{"chooseLang":"言語を選択","appName":"オーディオガイド","byod":"お手持ちの端末をご利用ください (BYOD)","panelTitle":"あなた専用のオーディオガイド","step1Title":"Wi-Fi に接続","step2Title":"オーディオガイドに接続","scanDesc":"船内のQRコードをスキャンして接続","etiquetteTitle":"ご案内","etiquette1":"イヤホンをお持ちの方はご利用ください。","etiquette2":"スピーカーで再生する場合は？","etiquette3":"端末を耳に近づけてください。","etiquette4":"音量は控えめにお願いします。","fb":"Facebook に接続","ig":"Instagram に接続","review":"ツアーはいかがでしたか？","survey":"アンケートに接続","enjoy":"ツアーをお楽しみください！"},
-"ru":{"chooseLang":"Выберите язык","appName":"Аудиогид","byod":"Используйте своё устройство (BYOD)","panelTitle":"Ваш личный аудиогид","step1Title":"Подключитесь к Wi-Fi","step2Title":"Подключитесь к аудиогиду","scanDesc":"Отсканируйте QR-код на борту, чтобы подключиться","etiquetteTitle":"Полезно знать","etiquette1":"Если у вас есть наушники, пожалуйста, используйте их.","etiquette2":"Используете динамик?","etiquette3":"Держите устройство ближе к уху.","etiquette4":"Пожалуйста, держите громкость низкой.","fb":"Подключиться к Facebook","ig":"Подключиться к Instagram","review":"Как прошла экскурсия?","survey":"Подключиться к опросу","enjoy":"Приятной экскурсии!"},
-"ko":{"chooseLang":"언어를 선택하세요","appName":"오디오 가이드","byod":"개인 기기 사용(BYOD)","panelTitle":"나만의 오디오 가이드","step1Title":"Wi-Fi에 연결하세요","step2Title":"오디오 가이드에 연결","scanDesc":"선내 QR코드를 스캔하여 연결하세요","etiquetteTitle":"알아두면 좋은 점","etiquette1":"이어폰이 있으시면 사용해 주세요.","etiquette2":"스피커를 사용하시나요?","etiquette3":"기기를 귀 가까이 대주세요.","etiquette4":"볼륨을 낮게 유지해 주세요.","fb":"Facebook에 연결","ig":"Instagram에 연결","review":"투어는 어떠셨나요?","survey":"설문조사에 연결","enjoy":"투어를 즐기세요!"},
-"tr":{"chooseLang":"Dilinizi seçin","appName":"Sesli Rehber","byod":"Kendi Cihazını Getir (BYOD)","panelTitle":"Kişisel sesli rehberiniz","step1Title":"Wi-Fi'ye bağlanın","step2Title":"Sesli rehbere bağlanın","scanDesc":"Bağlanmak için gemideki QR kodu tarayın","etiquetteTitle":"Bilmenizde fayda var","etiquette1":"Kulaklığınız varsa lütfen kullanın.","etiquette2":"Hoparlör mü kullanıyorsunuz?","etiquette3":"Cihazınızı kulağınıza yakın tutun.","etiquette4":"Lütfen sesi düşük tutun.","fb":"Facebook'a bağlanın","ig":"Instagram'a bağlanın","review":"Turunuz nasıldı?","survey":"Ankete bağlanın","enjoy":"İyi eğlenceler!"},
-"th":{"chooseLang":"เลือกภาษาของคุณ","appName":"เครื่องบรรยายเสียง","byod":"ใช้อุปกรณ์ของตนเอง (BYOD)","panelTitle":"เครื่องบรรยายเสียงส่วนตัวของคุณ","step1Title":"เชื่อมต่อ Wi-Fi","step2Title":"เชื่อมต่อกับเครื่องบรรยายเสียง","scanDesc":"สแกนคิวอาร์โค้ดบนเรือเพื่อเชื่อมต่อ","etiquetteTitle":"ข้อมูลน่ารู้","etiquette1":"หากมีหูฟัง กรุณาใช้หูฟัง","etiquette2":"ใช้ลำโพงอยู่หรือไม่?","etiquette3":"ถืออุปกรณ์ไว้ใกล้หูของคุณ","etiquette4":"กรุณาลดระดับเสียง","fb":"เชื่อมต่อกับ Facebook","ig":"เชื่อมต่อกับ Instagram","review":"ทัวร์เป็นอย่างไรบ้าง?","survey":"เชื่อมต่อกับแบบสำรวจ","enjoy":"ขอให้สนุกกับการทัวร์!"},
-"ar":{"chooseLang":"اختر لغتك","appName":"الدليل الصوتي","byod":"أحضر جهازك الخاص (BYOD)","panelTitle":"دليلك الصوتي الشخصي","step1Title":"الاتصال بشبكة Wi-Fi","step2Title":"الاتصال بالدليل الصوتي","scanDesc":"امسح رمز QR الموجود على متن القارب للاتصال","etiquetteTitle":"معلومات مفيدة","etiquette1":"إذا كان لديك سماعات، يرجى استخدامها.","etiquette2":"هل تستخدم مكبر الصوت؟","etiquette3":"أبقِ جهازك قريبًا من أذنك.","etiquette4":"يرجى إبقاء مستوى الصوت منخفضًا.","fb":"الاتصال بـ Facebook","ig":"الاتصال بـ Instagram","review":"كيف كانت جولتك؟","survey":"الاتصال بالاستبيان","enjoy":"استمتع بجولتك!"},
-"he":{"chooseLang":"בחרו את השפה","appName":"מדריך קולי","byod":"הביאו את המכשיר שלכם (BYOD)","panelTitle":"המדריך הקולי האישי שלכם","step1Title":"התחברו ל-Wi-Fi","step2Title":"התחברו למדריך הקולי","scanDesc":"סרקו את קוד ה-QR בספינה כדי להתחבר","etiquetteTitle":"כדאי לדעת","etiquette1":"אם יש לכם אוזניות, השתמשו בהן.","etiquette2":"משתמשים ברמקול?","etiquette3":"החזיקו את המכשיר קרוב לאוזן.","etiquette4":"שמרו על עוצמת קול נמוכה.","fb":"התחברו ל-Facebook","ig":"התחברו ל-Instagram","review":"איך היה הסיור?","survey":"התחברו לסקר","enjoy":"תהנו מהסיור!"},
-"pl":{"chooseLang":"Wybierz język","appName":"Przewodnik audio","byod":"Skorzystaj z własnego urządzenia (BYOD)","panelTitle":"Twój osobisty przewodnik audio","step1Title":"Połącz się z Wi-Fi","step2Title":"Połącz się z przewodnikiem audio","scanDesc":"Zeskanuj kod QR na pokładzie, aby się połączyć","etiquetteTitle":"Warto wiedzieć","etiquette1":"Jeśli masz słuchawki, skorzystaj z nich.","etiquette2":"Używasz głośnika?","etiquette3":"Trzymaj urządzenie blisko ucha.","etiquette4":"Ustaw niski poziom głośności.","fb":"Połącz się z Facebookiem","ig":"Połącz się z Instagramem","review":"Jak podobał Ci się rejs?","survey":"Połącz się z ankietą","enjoy":"Miłego rejsu!"},
-"id":{"chooseLang":"Pilih bahasa Anda","appName":"Pemandu Audio","byod":"Bawa Perangkat Anda Sendiri (BYOD)","panelTitle":"Pemandu audio pribadi Anda","step1Title":"Hubungkan ke Wi-Fi","step2Title":"Hubungkan ke pemandu audio","scanDesc":"Pindai kode QR di kapal untuk terhubung","etiquetteTitle":"Perlu diketahui","etiquette1":"Jika Anda memiliki earphone, silakan gunakan.","etiquette2":"Menggunakan pengeras suara?","etiquette3":"Dekatkan perangkat Anda ke telinga.","etiquette4":"Mohon jaga volume tetap rendah.","fb":"Hubungkan ke Facebook","ig":"Hubungkan ke Instagram","review":"Bagaimana tur Anda?","survey":"Hubungkan ke survei","enjoy":"Selamat menikmati tur!"},
-"hi":{"chooseLang":"अपनी भाषा चुनें","appName":"ऑडियो गाइड","byod":"अपना उपकरण लाएँ (BYOD)","panelTitle":"आपका निजी ऑडियो गाइड","step1Title":"Wi-Fi से कनेक्ट करें","step2Title":"ऑडियो गाइड से कनेक्ट करें","scanDesc":"कनेक्ट करने के लिए नाव पर लगे QR कोड को स्कैन करें","etiquetteTitle":"जानने योग्य बातें","etiquette1":"यदि आपके पास ईयरफ़ोन हैं, तो कृपया उनका उपयोग करें।","etiquette2":"स्पीकर का उपयोग कर रहे हैं?","etiquette3":"उपकरण को कान के पास रखें।","etiquette4":"कृपया आवाज़ धीमी रखें।","fb":"Facebook से कनेक्ट करें","ig":"Instagram से कनेक्ट करें","review":"आपका टूर कैसा रहा?","survey":"सर्वेक्षण से कनेक्ट करें","enjoy":"टूर का आनंद लें!"}
+ "en": {
+  "chooseLang": "Choose your language",
+  "appName": "Audio Guide",
+  "byod": "Bring Your Own Device (BYOD)",
+  "panelTitle": "Your Personal Audio Guide",
+  "step1Title": "Connect to WiFi",
+  "step2Title": "Connect to Audio Guide",
+  "scanDesc": "Scan QR-code on board to connect",
+  "etiquetteTitle": "Good to know",
+  "etiquette1": "If you have earphones please use them.",
+  "etiquette2": "Using speaker?",
+  "etiquette3": "Keep your device close to your ear.",
+  "etiquette4": "Please keep the volume low.",
+  "enjoy": "Enjoy your tour!"
+ },
+ "nl": {
+  "chooseLang": "Kies je taal",
+  "appName": "Audiogids",
+  "byod": "Gebruik je eigen toestel (BYOD)",
+  "panelTitle": "Je persoonlijke audiogids",
+  "step1Title": "Verbind met wifi",
+  "step2Title": "Verbind met de audiogids",
+  "scanDesc": "Scan de QR-code aan boord om te verbinden",
+  "etiquetteTitle": "Goed om te weten",
+  "etiquette1": "Heb je oortjes? Gebruik ze alsjeblieft.",
+  "etiquette2": "Gebruik je de luidspreker?",
+  "etiquette3": "Houd je toestel dicht bij je oor.",
+  "etiquette4": "Zet het volume alsjeblieft laag.",
+  "enjoy": "Geniet van je tour!"
+ },
+ "de": {
+  "chooseLang": "Sprache wählen",
+  "appName": "Audioguide",
+  "byod": "Eigenes Gerät mitbringen (BYOD)",
+  "panelTitle": "Ihr persönlicher Audioguide",
+  "step1Title": "Mit WLAN verbinden",
+  "step2Title": "Mit dem Audioguide verbinden",
+  "scanDesc": "QR-Code an Bord scannen, um sich zu verbinden",
+  "etiquetteTitle": "Gut zu wissen",
+  "etiquette1": "Wenn Sie Kopfhörer haben, nutzen Sie diese bitte.",
+  "etiquette2": "Lautsprecher?",
+  "etiquette3": "Halten Sie Ihr Gerät nah ans Ohr.",
+  "etiquette4": "Halten Sie die Lautstärke bitte niedrig.",
+  "enjoy": "Viel Spaß bei Ihrer Tour!"
+ },
+ "fr": {
+  "chooseLang": "Choisissez votre langue",
+  "appName": "Audioguide",
+  "byod": "Apportez votre appareil (BYOD)",
+  "panelTitle": "Votre audioguide personnel",
+  "step1Title": "Connectez-vous au Wi-Fi",
+  "step2Title": "Connectez-vous à l'audioguide",
+  "scanDesc": "Scannez le QR-code à bord pour vous connecter",
+  "etiquetteTitle": "Bon à savoir",
+  "etiquette1": "Si vous avez des écouteurs, utilisez-les, merci.",
+  "etiquette2": "Haut-parleur ?",
+  "etiquette3": "Gardez votre appareil près de l'oreille.",
+  "etiquette4": "Gardez le volume bas, merci.",
+  "enjoy": "Profitez de votre visite !"
+ },
+ "es": {
+  "chooseLang": "Elige tu idioma",
+  "appName": "Audioguía",
+  "byod": "Trae tu propio dispositivo (BYOD)",
+  "panelTitle": "Tu audioguía personal",
+  "step1Title": "Conéctate al wifi",
+  "step2Title": "Conéctate a la audioguía",
+  "scanDesc": "Escanea el código QR a bordo para conectarte",
+  "etiquetteTitle": "A tener en cuenta",
+  "etiquette1": "Si tienes auriculares, úsalos, por favor.",
+  "etiquette2": "¿Usas el altavoz?",
+  "etiquette3": "Mantén el dispositivo cerca del oído.",
+  "etiquette4": "Mantén el volumen bajo, por favor.",
+  "enjoy": "¡Disfruta del recorrido!"
+ },
+ "it": {
+  "chooseLang": "Scegli la lingua",
+  "appName": "Audioguida",
+  "byod": "Porta il tuo dispositivo (BYOD)",
+  "panelTitle": "La tua audioguida personale",
+  "step1Title": "Connettiti al Wi-Fi",
+  "step2Title": "Connettiti all'audioguida",
+  "scanDesc": "Scansiona il codice QR a bordo per connetterti",
+  "etiquetteTitle": "Buono a sapersi",
+  "etiquette1": "Se hai gli auricolari, usali per favore.",
+  "etiquette2": "Usi l'altoparlante?",
+  "etiquette3": "Tieni il dispositivo vicino all'orecchio.",
+  "etiquette4": "Tieni il volume basso, per favore.",
+  "enjoy": "Buon tour!"
+ },
+ "pt": {
+  "chooseLang": "Escolha o seu idioma",
+  "appName": "Audioguia",
+  "byod": "Traga o seu dispositivo (BYOD)",
+  "panelTitle": "O seu audioguia pessoal",
+  "step1Title": "Ligue-se ao Wi-Fi",
+  "step2Title": "Ligue-se ao audioguia",
+  "scanDesc": "Digitalize o código QR a bordo para se ligar",
+  "etiquetteTitle": "Bom saber",
+  "etiquette1": "Se tiver auscultadores, use-os, por favor.",
+  "etiquette2": "Usar o altifalante?",
+  "etiquette3": "Mantenha o dispositivo perto do ouvido.",
+  "etiquette4": "Mantenha o volume baixo, por favor.",
+  "enjoy": "Aproveite o passeio!"
+ },
+ "zh": {
+  "chooseLang": "选择语言",
+  "appName": "语音导览",
+  "byod": "使用您的自带设备 (BYOD)",
+  "panelTitle": "您的个人语音导览",
+  "step1Title": "连接 WiFi",
+  "step2Title": "连接语音导览",
+  "scanDesc": "扫描船上二维码进行连接",
+  "etiquetteTitle": "温馨提示",
+  "etiquette1": "如有耳机，请使用耳机。",
+  "etiquette2": "使用扬声器时？",
+  "etiquette3": "请将设备靠近耳边。",
+  "etiquette4": "请保持音量适中。",
+  "enjoy": "祝您旅途愉快！"
+ },
+ "yue": {
+  "chooseLang": "選擇你的語言",
+  "appName": "語音導覽",
+  "byod": "自攜裝置（BYOD）",
+  "panelTitle": "你的個人語音導覽",
+  "step1Title": "連接 Wi-Fi",
+  "step2Title": "連接語音導覽",
+  "scanDesc": "掃描船上二維碼以連接",
+  "etiquetteTitle": "溫馨提示",
+  "etiquette1": "如有耳機，請使用耳機。",
+  "etiquette2": "使用揚聲器？",
+  "etiquette3": "請將裝置靠近耳邊。",
+  "etiquette4": "請保持音量適中。",
+  "enjoy": "祝你旅途愉快！"
+ },
+ "ja": {
+  "chooseLang": "言語を選択",
+  "appName": "オーディオガイド",
+  "byod": "お手持ちの端末をご利用ください (BYOD)",
+  "panelTitle": "あなた専用のオーディオガイド",
+  "step1Title": "Wi-Fi に接続",
+  "step2Title": "オーディオガイドに接続",
+  "scanDesc": "船内のQRコードをスキャンして接続",
+  "etiquetteTitle": "ご案内",
+  "etiquette1": "イヤホンをお持ちの方はご利用ください。",
+  "etiquette2": "スピーカーで再生する場合は？",
+  "etiquette3": "端末を耳に近づけてください。",
+  "etiquette4": "音量は控えめにお願いします。",
+  "enjoy": "ツアーをお楽しみください！"
+ },
+ "ru": {
+  "chooseLang": "Выберите язык",
+  "appName": "Аудиогид",
+  "byod": "Используйте своё устройство (BYOD)",
+  "panelTitle": "Ваш личный аудиогид",
+  "step1Title": "Подключитесь к Wi-Fi",
+  "step2Title": "Подключитесь к аудиогиду",
+  "scanDesc": "Отсканируйте QR-код на борту, чтобы подключиться",
+  "etiquetteTitle": "Полезно знать",
+  "etiquette1": "Если у вас есть наушники, пожалуйста, используйте их.",
+  "etiquette2": "Используете динамик?",
+  "etiquette3": "Держите устройство ближе к уху.",
+  "etiquette4": "Пожалуйста, держите громкость низкой.",
+  "enjoy": "Приятной экскурсии!"
+ },
+ "ko": {
+  "chooseLang": "언어를 선택하세요",
+  "appName": "오디오 가이드",
+  "byod": "개인 기기 사용(BYOD)",
+  "panelTitle": "나만의 오디오 가이드",
+  "step1Title": "Wi-Fi에 연결하세요",
+  "step2Title": "오디오 가이드에 연결",
+  "scanDesc": "선내 QR코드를 스캔하여 연결하세요",
+  "etiquetteTitle": "알아두면 좋은 점",
+  "etiquette1": "이어폰이 있으시면 사용해 주세요.",
+  "etiquette2": "스피커를 사용하시나요?",
+  "etiquette3": "기기를 귀 가까이 대주세요.",
+  "etiquette4": "볼륨을 낮게 유지해 주세요.",
+  "enjoy": "투어를 즐기세요!"
+ },
+ "tr": {
+  "chooseLang": "Dilinizi seçin",
+  "appName": "Sesli Rehber",
+  "byod": "Kendi Cihazını Getir (BYOD)",
+  "panelTitle": "Kişisel sesli rehberiniz",
+  "step1Title": "Wi-Fi'ye bağlanın",
+  "step2Title": "Sesli rehbere bağlanın",
+  "scanDesc": "Bağlanmak için gemideki QR kodu tarayın",
+  "etiquetteTitle": "Bilmenizde fayda var",
+  "etiquette1": "Kulaklığınız varsa lütfen kullanın.",
+  "etiquette2": "Hoparlör mü kullanıyorsunuz?",
+  "etiquette3": "Cihazınızı kulağınıza yakın tutun.",
+  "etiquette4": "Lütfen sesi düşük tutun.",
+  "enjoy": "İyi eğlenceler!"
+ },
+ "th": {
+  "chooseLang": "เลือกภาษาของคุณ",
+  "appName": "เครื่องบรรยายเสียง",
+  "byod": "ใช้อุปกรณ์ของตนเอง (BYOD)",
+  "panelTitle": "เครื่องบรรยายเสียงส่วนตัวของคุณ",
+  "step1Title": "เชื่อมต่อ Wi-Fi",
+  "step2Title": "เชื่อมต่อกับเครื่องบรรยายเสียง",
+  "scanDesc": "สแกนคิวอาร์โค้ดบนเรือเพื่อเชื่อมต่อ",
+  "etiquetteTitle": "ข้อมูลน่ารู้",
+  "etiquette1": "หากมีหูฟัง กรุณาใช้หูฟัง",
+  "etiquette2": "ใช้ลำโพงอยู่หรือไม่?",
+  "etiquette3": "ถืออุปกรณ์ไว้ใกล้หูของคุณ",
+  "etiquette4": "กรุณาลดระดับเสียง",
+  "enjoy": "ขอให้สนุกกับการทัวร์!"
+ },
+ "ar": {
+  "chooseLang": "اختر لغتك",
+  "appName": "الدليل الصوتي",
+  "byod": "أحضر جهازك الخاص (BYOD)",
+  "panelTitle": "دليلك الصوتي الشخصي",
+  "step1Title": "الاتصال بشبكة Wi-Fi",
+  "step2Title": "الاتصال بالدليل الصوتي",
+  "scanDesc": "امسح رمز QR الموجود على متن القارب للاتصال",
+  "etiquetteTitle": "معلومات مفيدة",
+  "etiquette1": "إذا كان لديك سماعات، يرجى استخدامها.",
+  "etiquette2": "هل تستخدم مكبر الصوت؟",
+  "etiquette3": "أبقِ جهازك قريبًا من أذنك.",
+  "etiquette4": "يرجى إبقاء مستوى الصوت منخفضًا.",
+  "enjoy": "استمتع بجولتك!"
+ },
+ "he": {
+  "chooseLang": "בחרו את השפה",
+  "appName": "מדריך קולי",
+  "byod": "הביאו את המכשיר שלכם (BYOD)",
+  "panelTitle": "המדריך הקולי האישי שלכם",
+  "step1Title": "התחברו ל-Wi-Fi",
+  "step2Title": "התחברו למדריך הקולי",
+  "scanDesc": "סרקו את קוד ה-QR בספינה כדי להתחבר",
+  "etiquetteTitle": "כדאי לדעת",
+  "etiquette1": "אם יש לכם אוזניות, השתמשו בהן.",
+  "etiquette2": "משתמשים ברמקול?",
+  "etiquette3": "החזיקו את המכשיר קרוב לאוזן.",
+  "etiquette4": "שמרו על עוצמת קול נמוכה.",
+  "enjoy": "תהנו מהסיור!"
+ },
+ "pl": {
+  "chooseLang": "Wybierz język",
+  "appName": "Przewodnik audio",
+  "byod": "Skorzystaj z własnego urządzenia (BYOD)",
+  "panelTitle": "Twój osobisty przewodnik audio",
+  "step1Title": "Połącz się z Wi-Fi",
+  "step2Title": "Połącz się z przewodnikiem audio",
+  "scanDesc": "Zeskanuj kod QR na pokładzie, aby się połączyć",
+  "etiquetteTitle": "Warto wiedzieć",
+  "etiquette1": "Jeśli masz słuchawki, skorzystaj z nich.",
+  "etiquette2": "Używasz głośnika?",
+  "etiquette3": "Trzymaj urządzenie blisko ucha.",
+  "etiquette4": "Ustaw niski poziom głośności.",
+  "enjoy": "Miłego rejsu!"
+ },
+ "id": {
+  "chooseLang": "Pilih bahasa Anda",
+  "appName": "Pemandu Audio",
+  "byod": "Bawa Perangkat Anda Sendiri (BYOD)",
+  "panelTitle": "Pemandu audio pribadi Anda",
+  "step1Title": "Hubungkan ke Wi-Fi",
+  "step2Title": "Hubungkan ke pemandu audio",
+  "scanDesc": "Pindai kode QR di kapal untuk terhubung",
+  "etiquetteTitle": "Perlu diketahui",
+  "etiquette1": "Jika Anda memiliki earphone, silakan gunakan.",
+  "etiquette2": "Menggunakan pengeras suara?",
+  "etiquette3": "Dekatkan perangkat Anda ke telinga.",
+  "etiquette4": "Mohon jaga volume tetap rendah.",
+  "enjoy": "Selamat menikmati tur!"
+ },
+ "hi": {
+  "chooseLang": "अपनी भाषा चुनें",
+  "appName": "ऑडियो गाइड",
+  "byod": "अपना उपकरण लाएँ (BYOD)",
+  "panelTitle": "आपका निजी ऑडियो गाइड",
+  "step1Title": "Wi-Fi से कनेक्ट करें",
+  "step2Title": "ऑडियो गाइड से कनेक्ट करें",
+  "scanDesc": "कनेक्ट करने के लिए नाव पर लगे QR कोड को स्कैन करें",
+  "etiquetteTitle": "जानने योग्य बातें",
+  "etiquette1": "यदि आपके पास ईयरफ़ोन हैं, तो कृपया उनका उपयोग करें।",
+  "etiquette2": "स्पीकर का उपयोग कर रहे हैं?",
+  "etiquette3": "उपकरण को कान के पास रखें।",
+  "etiquette4": "कृपया आवाज़ धीमी रखें।",
+  "enjoy": "टूर का आनंद लें!"
+ }
 };
 
 const $ = (s) => document.querySelector(s);
@@ -233,9 +484,6 @@ function selectLang(code) {
     const k = el.getAttribute("data-i18n");
     if (s[k]) el.textContent = s[k];
   });
-  $("#btn-fb").href = CONFIG.FACEBOOK;
-  $("#btn-ig").href = CONFIG.INSTAGRAM;
-  $("#btn-survey").href = CONFIG.SURVEY;
   $("#lang-toggle-label").textContent = code.toUpperCase();
   $("#lang-toggle").classList.add("is-on");
   $("#screen-lang").hidden = true;
