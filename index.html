@@ -48,6 +48,10 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Ar
 .step-num{flex:0 0 auto;width:28px;height:28px;border-radius:50%;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px}
 .step-ico{flex:0 0 auto;width:34px;height:34px;border-radius:10px;background:var(--wash);display:flex;align-items:center;justify-content:center}
 .step-ico svg{width:20px;height:20px;fill:var(--red)}
+.step-qr{width:100%;height:100%;display:block;border:1px solid var(--line);border-radius:12px;background:#fff}
+.qr-holder{flex:0 0 auto;position:relative;width:72px;height:72px}
+.qr-holder .step-num{position:absolute;bottom:-7px;left:-7px;width:26px;height:26px;border-radius:50%;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;box-shadow:0 0 0 2px #fff}
+.panel-note{font-size:13px;color:var(--muted);text-align:center;margin:0 0 6px}
 .step-body{flex:1;min-width:0}
 .step-body h2{margin:0 0 2px;font-size:16px;font-weight:750}
 .step-body p{margin:0;color:var(--muted);font-size:14px}
@@ -103,17 +107,16 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Ar
 
     <div class="panel">
       <p class="panel-title" data-i18n="panelTitle">Your Personal Audio Guide</p>
+      <p class="panel-note" data-i18n="onBoardNote">The QR codes are on the boat — scan them there.</p>
       <div class="step">
-        <span class="step-num">1</span>
-        <span class="step-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M1 9l2 2c4.97-4.97 13.03-4.97 18 0l2-2C16.93 2.93 7.08 2.93 1 9zm8 8l3 3 3-3c-1.65-1.66-4.34-1.66-6 0zm-4-4l2 2c2.76-2.76 7.24-2.76 10 0l2-2C15.14 9.14 8.87 9.14 5 13z"/></svg></span>
+        <div class="qr-holder"><img class="step-qr" src="qr-wifi.svg" alt=""><span class="step-num">1</span></div>
         <div class="step-body">
           <h2 data-i18n="step1Title">Connect to WiFi</h2>
           <p data-i18n="scanDesc">Scan QR-code on board to connect</p>
         </div>
       </div>
       <div class="step">
-        <span class="step-num">2</span>
-        <span class="step-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1a9 9 0 0 0-9 9v7a3 3 0 0 0 3 3h3v-8H5v-2a7 7 0 0 1 14 0v2h-4v8h3a3 3 0 0 0 3-3v-7a9 9 0 0 0-9-9z"/></svg></span>
+        <div class="qr-holder"><img class="step-qr" src="qr-audio.svg" alt=""><span class="step-num">2</span></div>
         <div class="step-body">
           <h2 data-i18n="step2Title">Connect to Audio Guide</h2>
           <p data-i18n="scanDesc">Scan QR-code on board to connect</p>
@@ -175,7 +178,8 @@ const STRINGS = {
   "etiquette2": "Using speaker?",
   "etiquette3": "Keep your device close to your ear.",
   "etiquette4": "Please keep the volume low.",
-  "enjoy": "Enjoy your tour!"
+  "enjoy": "Enjoy your tour!",
+  "onBoardNote": "The QR codes are on the boat — scan them there."
  },
  "nl": {
   "chooseLang": "Kies je taal",
@@ -190,7 +194,8 @@ const STRINGS = {
   "etiquette2": "Gebruik je de luidspreker?",
   "etiquette3": "Houd je toestel dicht bij je oor.",
   "etiquette4": "Zet het volume alsjeblieft laag.",
-  "enjoy": "Geniet van je tour!"
+  "enjoy": "Geniet van je tour!",
+  "onBoardNote": "Deze QR-codes vind je op de boot — scan ze daar."
  },
  "de": {
   "chooseLang": "Sprache wählen",
@@ -205,7 +210,8 @@ const STRINGS = {
   "etiquette2": "Lautsprecher?",
   "etiquette3": "Halten Sie Ihr Gerät nah ans Ohr.",
   "etiquette4": "Halten Sie die Lautstärke bitte niedrig.",
-  "enjoy": "Viel Spaß bei Ihrer Tour!"
+  "enjoy": "Viel Spaß bei Ihrer Tour!",
+  "onBoardNote": "Diese QR-Codes finden Sie an Bord — scannen Sie sie dort."
  },
  "fr": {
   "chooseLang": "Choisissez votre langue",
@@ -220,7 +226,8 @@ const STRINGS = {
   "etiquette2": "Haut-parleur ?",
   "etiquette3": "Gardez votre appareil près de l'oreille.",
   "etiquette4": "Gardez le volume bas, merci.",
-  "enjoy": "Profitez de votre visite !"
+  "enjoy": "Profitez de votre visite !",
+  "onBoardNote": "Ces QR-codes se trouvent à bord — scannez-les là-bas."
  },
  "es": {
   "chooseLang": "Elige tu idioma",
@@ -235,7 +242,8 @@ const STRINGS = {
   "etiquette2": "¿Usas el altavoz?",
   "etiquette3": "Mantén el dispositivo cerca del oído.",
   "etiquette4": "Mantén el volumen bajo, por favor.",
-  "enjoy": "¡Disfruta del recorrido!"
+  "enjoy": "¡Disfruta del recorrido!",
+  "onBoardNote": "Estos códigos QR están a bordo — escanéalos allí."
  },
  "it": {
   "chooseLang": "Scegli la lingua",
@@ -250,7 +258,8 @@ const STRINGS = {
   "etiquette2": "Usi l'altoparlante?",
   "etiquette3": "Tieni il dispositivo vicino all'orecchio.",
   "etiquette4": "Tieni il volume basso, per favore.",
-  "enjoy": "Buon tour!"
+  "enjoy": "Buon tour!",
+  "onBoardNote": "Questi codici QR sono a bordo — scansionali lì."
  },
  "pt": {
   "chooseLang": "Escolha o seu idioma",
@@ -265,7 +274,8 @@ const STRINGS = {
   "etiquette2": "Usar o altifalante?",
   "etiquette3": "Mantenha o dispositivo perto do ouvido.",
   "etiquette4": "Mantenha o volume baixo, por favor.",
-  "enjoy": "Aproveite o passeio!"
+  "enjoy": "Aproveite o passeio!",
+  "onBoardNote": "Estes códigos QR estão a bordo — digitalize-os lá."
  },
  "zh": {
   "chooseLang": "选择语言",
@@ -280,7 +290,8 @@ const STRINGS = {
   "etiquette2": "使用扬声器时？",
   "etiquette3": "请将设备靠近耳边。",
   "etiquette4": "请保持音量适中。",
-  "enjoy": "祝您旅途愉快！"
+  "enjoy": "祝您旅途愉快！",
+  "onBoardNote": "这些二维码在船上 — 请在船上扫描。"
  },
  "yue": {
   "chooseLang": "選擇你的語言",
@@ -295,7 +306,8 @@ const STRINGS = {
   "etiquette2": "使用揚聲器？",
   "etiquette3": "請將裝置靠近耳邊。",
   "etiquette4": "請保持音量適中。",
-  "enjoy": "祝你旅途愉快！"
+  "enjoy": "祝你旅途愉快！",
+  "onBoardNote": "這些二維碼在船上 — 請在船上掃描。"
  },
  "ja": {
   "chooseLang": "言語を選択",
@@ -310,7 +322,8 @@ const STRINGS = {
   "etiquette2": "スピーカーで再生する場合は？",
   "etiquette3": "端末を耳に近づけてください。",
   "etiquette4": "音量は控えめにお願いします。",
-  "enjoy": "ツアーをお楽しみください！"
+  "enjoy": "ツアーをお楽しみください！",
+  "onBoardNote": "QRコードは船内にあります — 船内でスキャンしてください。"
  },
  "ru": {
   "chooseLang": "Выберите язык",
@@ -325,7 +338,8 @@ const STRINGS = {
   "etiquette2": "Используете динамик?",
   "etiquette3": "Держите устройство ближе к уху.",
   "etiquette4": "Пожалуйста, держите громкость низкой.",
-  "enjoy": "Приятной экскурсии!"
+  "enjoy": "Приятной экскурсии!",
+  "onBoardNote": "Эти QR-коды находятся на борту — отсканируйте их там."
  },
  "ko": {
   "chooseLang": "언어를 선택하세요",
@@ -340,7 +354,8 @@ const STRINGS = {
   "etiquette2": "스피커를 사용하시나요?",
   "etiquette3": "기기를 귀 가까이 대주세요.",
   "etiquette4": "볼륨을 낮게 유지해 주세요.",
-  "enjoy": "투어를 즐기세요!"
+  "enjoy": "투어를 즐기세요!",
+  "onBoardNote": "QR코드는 선내에 있습니다 — 선내에서 스캔하세요."
  },
  "tr": {
   "chooseLang": "Dilinizi seçin",
@@ -355,7 +370,8 @@ const STRINGS = {
   "etiquette2": "Hoparlör mü kullanıyorsunuz?",
   "etiquette3": "Cihazınızı kulağınıza yakın tutun.",
   "etiquette4": "Lütfen sesi düşük tutun.",
-  "enjoy": "İyi eğlenceler!"
+  "enjoy": "İyi eğlenceler!",
+  "onBoardNote": "Bu QR kodları teknede bulunur — orada tarayın."
  },
  "th": {
   "chooseLang": "เลือกภาษาของคุณ",
@@ -370,7 +386,8 @@ const STRINGS = {
   "etiquette2": "ใช้ลำโพงอยู่หรือไม่?",
   "etiquette3": "ถืออุปกรณ์ไว้ใกล้หูของคุณ",
   "etiquette4": "กรุณาลดระดับเสียง",
-  "enjoy": "ขอให้สนุกกับการทัวร์!"
+  "enjoy": "ขอให้สนุกกับการทัวร์!",
+  "onBoardNote": "คิวอาร์โค้ดเหล่านี้อยู่บนเรือ — สแกนบนเรือ"
  },
  "ar": {
   "chooseLang": "اختر لغتك",
@@ -385,7 +402,8 @@ const STRINGS = {
   "etiquette2": "هل تستخدم مكبر الصوت؟",
   "etiquette3": "أبقِ جهازك قريبًا من أذنك.",
   "etiquette4": "يرجى إبقاء مستوى الصوت منخفضًا.",
-  "enjoy": "استمتع بجولتك!"
+  "enjoy": "استمتع بجولتك!",
+  "onBoardNote": "توجد رموز QR هذه على متن القارب — امسحها هناك."
  },
  "he": {
   "chooseLang": "בחרו את השפה",
@@ -400,7 +418,8 @@ const STRINGS = {
   "etiquette2": "משתמשים ברמקול?",
   "etiquette3": "החזיקו את המכשיר קרוב לאוזן.",
   "etiquette4": "שמרו על עוצמת קול נמוכה.",
-  "enjoy": "תהנו מהסיור!"
+  "enjoy": "תהנו מהסיור!",
+  "onBoardNote": "קודי ה-QR האלה נמצאים בספינה — סרקו אותם שם."
  },
  "pl": {
   "chooseLang": "Wybierz język",
@@ -415,7 +434,8 @@ const STRINGS = {
   "etiquette2": "Używasz głośnika?",
   "etiquette3": "Trzymaj urządzenie blisko ucha.",
   "etiquette4": "Ustaw niski poziom głośności.",
-  "enjoy": "Miłego rejsu!"
+  "enjoy": "Miłego rejsu!",
+  "onBoardNote": "Te kody QR znajdują się na pokładzie — zeskanuj je tam."
  },
  "id": {
   "chooseLang": "Pilih bahasa Anda",
@@ -430,7 +450,8 @@ const STRINGS = {
   "etiquette2": "Menggunakan pengeras suara?",
   "etiquette3": "Dekatkan perangkat Anda ke telinga.",
   "etiquette4": "Mohon jaga volume tetap rendah.",
-  "enjoy": "Selamat menikmati tur!"
+  "enjoy": "Selamat menikmati tur!",
+  "onBoardNote": "Kode QR ini ada di kapal — pindai di sana."
  },
  "hi": {
   "chooseLang": "अपनी भाषा चुनें",
@@ -445,7 +466,8 @@ const STRINGS = {
   "etiquette2": "स्पीकर का उपयोग कर रहे हैं?",
   "etiquette3": "उपकरण को कान के पास रखें।",
   "etiquette4": "कृपया आवाज़ धीमी रखें।",
-  "enjoy": "टूर का आनंद लें!"
+  "enjoy": "टूर का आनंद लें!",
+  "onBoardNote": "ये QR कोड नाव पर हैं — वहाँ स्कैन करें।"
  }
 };
 
