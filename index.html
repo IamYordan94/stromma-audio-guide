@@ -40,6 +40,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Ar
 .hero .kicker{text-transform:uppercase;letter-spacing:.16em;font-size:12px;font-weight:800;margin:0 0 6px;opacity:.95}
 .hero h1{font-size:30px;margin:0;font-weight:800;letter-spacing:.02em;line-height:1.05}
 
+/* instructions-not-the-guide banner */
+.notice-banner{background:#fff;border:2px solid var(--red);border-radius:15px;margin:20px 18px 0;padding:16px 18px}
+.notice-banner strong{display:block;font-size:15px;font-weight:800;color:var(--red);margin-bottom:5px;line-height:1.35}
+.notice-banner p{margin:0;font-size:14.5px;color:var(--ink)}
+
 /* personal audio guide panel */
 .panel{background:#fff;border:1.5px solid var(--line);border-radius:15px;margin:20px 18px 0;padding:18px 18px 8px}
 .panel-title{font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.12em;color:var(--ink);margin:0 0 12px;text-align:center}
@@ -105,6 +110,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Ar
       <h1 data-i18n="appName">Audio Guide</h1>
     </div>
 
+    <div class="notice-banner">
+      <strong data-i18n="noticeTitle">These are instructions — not the audio guide</strong>
+      <p data-i18n="noticeBody">This page explains how to connect to the audio guide on the boat using your own phone.</p>
+    </div>
+
     <div class="panel">
       <p class="panel-title" data-i18n="panelTitle">Your Personal Audio Guide</p>
       <p class="panel-note" data-i18n="onBoardNote">The QR codes are on the boat — scan them there.</p>
@@ -127,6 +137,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Ar
     <div class="etiquette">
       <h3 data-i18n="etiquetteTitle">Good to know</h3>
       <p class="lead" data-i18n="etiquette1">If you have earphones please use them.</p>
+      <p class="lead" data-i18n="headphones">No earphones? Buy a pair on board for €0.50 – €1.00.</p>
       <p class="q" data-i18n="etiquette2">Using speaker?</p>
       <ul>
         <li data-i18n="etiquette3">Keep your device close to your ear.</li>
@@ -166,6 +177,9 @@ const LANGS = [
 
 const STRINGS = {
  "en": {
+  "noticeTitle": "These are instructions — not the audio guide",
+  "noticeBody": "This page explains how to connect to the audio guide on the boat using your own phone.",
+  "headphones": "No earphones? Buy a pair on board for €0.50 – €1.00.",
   "chooseLang": "Choose your language",
   "appName": "Audio Guide",
   "byod": "Bring Your Own Device (BYOD)",
@@ -182,6 +196,9 @@ const STRINGS = {
   "onBoardNote": "The QR codes are on the boat — scan them there."
  },
  "nl": {
+  "noticeTitle": "Dit is een uitleg — niet de audiogids zelf",
+  "noticeBody": "Op deze pagina lees je hoe je met je eigen telefoon verbinding maakt met de audiogids aan boord.",
+  "headphones": "Geen oortjes? Koop een paar aan boord voor €0.50 – €1.00.",
   "chooseLang": "Kies je taal",
   "appName": "Audiogids",
   "byod": "Gebruik je eigen toestel (BYOD)",
@@ -198,6 +215,9 @@ const STRINGS = {
   "onBoardNote": "Deze QR-codes vind je op de boot — scan ze daar."
  },
  "de": {
+  "noticeTitle": "Das ist eine Anleitung — nicht der Audioguide selbst",
+  "noticeBody": "Diese Seite erklärt, wie Sie sich mit Ihrem eigenen Handy mit dem Audioguide an Bord verbinden.",
+  "headphones": "Keine Kopfhörer? Kaufen Sie ein Paar an Bord für €0.50 – €1.00.",
   "chooseLang": "Sprache wählen",
   "appName": "Audioguide",
   "byod": "Eigenes Gerät mitbringen (BYOD)",
@@ -214,6 +234,9 @@ const STRINGS = {
   "onBoardNote": "Diese QR-Codes finden Sie an Bord — scannen Sie sie dort."
  },
  "fr": {
+  "noticeTitle": "Ceci est un mode d'emploi — pas l'audioguide lui-même",
+  "noticeBody": "Cette page explique comment connecter votre propre téléphone à l'audioguide à bord.",
+  "headphones": "Pas d'écouteurs ? Achetez-en une paire à bord pour €0.50 – €1.00.",
   "chooseLang": "Choisissez votre langue",
   "appName": "Audioguide",
   "byod": "Apportez votre appareil (BYOD)",
@@ -230,6 +253,9 @@ const STRINGS = {
   "onBoardNote": "Ces QR-codes se trouvent à bord — scannez-les là-bas."
  },
  "es": {
+  "noticeTitle": "Esto son instrucciones — no la audioguía",
+  "noticeBody": "Esta página explica cómo conectar tu propio teléfono a la audioguía a bordo.",
+  "headphones": "¿No tienes auriculares? Compra un par a bordo por €0.50 – €1.00.",
   "chooseLang": "Elige tu idioma",
   "appName": "Audioguía",
   "byod": "Trae tu propio dispositivo (BYOD)",
@@ -246,6 +272,9 @@ const STRINGS = {
   "onBoardNote": "Estos códigos QR están a bordo — escanéalos allí."
  },
  "it": {
+  "noticeTitle": "Queste sono istruzioni — non l'audioguida",
+  "noticeBody": "Questa pagina spiega come collegare il tuo telefono all'audioguida a bordo.",
+  "headphones": "Niente auricolari? Compra un paio a bordo per €0.50 – €1.00.",
   "chooseLang": "Scegli la lingua",
   "appName": "Audioguida",
   "byod": "Porta il tuo dispositivo (BYOD)",
@@ -262,6 +291,9 @@ const STRINGS = {
   "onBoardNote": "Questi codici QR sono a bordo — scansionali lì."
  },
  "pt": {
+  "noticeTitle": "Isto são instruções — não o audioguia",
+  "noticeBody": "Esta página explica como ligar o seu próprio telemóvel ao audioguia a bordo.",
+  "headphones": "Não tem auscultadores? Compre um par a bordo por €0.50 – €1.00.",
   "chooseLang": "Escolha o seu idioma",
   "appName": "Audioguia",
   "byod": "Traga o seu dispositivo (BYOD)",
@@ -278,6 +310,9 @@ const STRINGS = {
   "onBoardNote": "Estes códigos QR estão a bordo — digitalize-os lá."
  },
  "zh": {
+  "noticeTitle": "这是使用说明 — 并非语音导览本身",
+  "noticeBody": "本页说明如何用您自己的手机连接船上的语音导览。",
+  "headphones": "没有耳机？可在船上购买一副，价格 €0.50 – €1.00。",
   "chooseLang": "选择语言",
   "appName": "语音导览",
   "byod": "使用您的自带设备 (BYOD)",
@@ -294,6 +329,9 @@ const STRINGS = {
   "onBoardNote": "这些二维码在船上 — 请在船上扫描。"
  },
  "yue": {
+  "noticeTitle": "這是使用說明 — 並非語音導覽本身",
+  "noticeBody": "本頁說明如何使用您自己的手機連接船上的語音導覽。",
+  "headphones": "沒有耳機？可於船上購買一副，價格 €0.50 – €1.00。",
   "chooseLang": "選擇你的語言",
   "appName": "語音導覽",
   "byod": "自攜裝置（BYOD）",
@@ -310,6 +348,9 @@ const STRINGS = {
   "onBoardNote": "這些二維碼在船上 — 請在船上掃描。"
  },
  "ja": {
+  "noticeTitle": "これは説明です — オーディオガイド本体ではありません",
+  "noticeBody": "このページでは、ご自身のスマートフォンで船内のオーディオガイドに接続する方法を説明します。",
+  "headphones": "イヤホンをお持ちでない方は、船内で €0.50 – €1.00 にてご購入いただけます。",
   "chooseLang": "言語を選択",
   "appName": "オーディオガイド",
   "byod": "お手持ちの端末をご利用ください (BYOD)",
@@ -326,6 +367,9 @@ const STRINGS = {
   "onBoardNote": "QRコードは船内にあります — 船内でスキャンしてください。"
  },
  "ru": {
+  "noticeTitle": "Это инструкция — не сам аудиогид",
+  "noticeBody": "На этой странице объясняется, как подключиться к аудиогиду на борту с помощью вашего телефона.",
+  "headphones": "Нет наушников? Купите пару на борту за €0.50 – €1.00.",
   "chooseLang": "Выберите язык",
   "appName": "Аудиогид",
   "byod": "Используйте своё устройство (BYOD)",
@@ -342,6 +386,9 @@ const STRINGS = {
   "onBoardNote": "Эти QR-коды находятся на борту — отсканируйте их там."
  },
  "ko": {
+  "noticeTitle": "이것은 안내입니다 — 오디오 가이드 자체가 아닙니다",
+  "noticeBody": "이 페이지는 자신의 휴대폰으로 선내 오디오 가이드에 연결하는 방법을 설명합니다.",
+  "headphones": "이어폰이 없으신가요? 선내에서 €0.50 – €1.00에 구매하실 수 있습니다.",
   "chooseLang": "언어를 선택하세요",
   "appName": "오디오 가이드",
   "byod": "개인 기기 사용(BYOD)",
@@ -358,6 +405,9 @@ const STRINGS = {
   "onBoardNote": "QR코드는 선내에 있습니다 — 선내에서 스캔하세요."
  },
  "tr": {
+  "noticeTitle": "Bunlar talimattır — sesli rehberin kendisi değil",
+  "noticeBody": "Bu sayfa, teknedeki sesli rehbere kendi telefonunuzla nasıl bağlanacağınızı açıklar.",
+  "headphones": "Kulaklığınız yok mu? Teknede €0.50 – €1.00 karşılığında bir çift satın alabilirsiniz.",
   "chooseLang": "Dilinizi seçin",
   "appName": "Sesli Rehber",
   "byod": "Kendi Cihazını Getir (BYOD)",
@@ -374,6 +424,9 @@ const STRINGS = {
   "onBoardNote": "Bu QR kodları teknede bulunur — orada tarayın."
  },
  "th": {
+  "noticeTitle": "นี่คือคำแนะนำ — ไม่ใช่เครื่องบรรยายเสียง",
+  "noticeBody": "หน้านี้อธิบายวิธีเชื่อมต่อเครื่องบรรยายเสียงบนเรือด้วยโทรศัพท์ของคุณเอง",
+  "headphones": "ไม่มีหูฟัง? ซื้อได้บนเรือในราคา €0.50 – €1.00",
   "chooseLang": "เลือกภาษาของคุณ",
   "appName": "เครื่องบรรยายเสียง",
   "byod": "ใช้อุปกรณ์ของตนเอง (BYOD)",
@@ -390,6 +443,9 @@ const STRINGS = {
   "onBoardNote": "คิวอาร์โค้ดเหล่านี้อยู่บนเรือ — สแกนบนเรือ"
  },
  "ar": {
+  "noticeTitle": "هذه تعليمات — وليست الدليل الصوتي نفسه",
+  "noticeBody": "تشرح هذه الصفحة كيفية الاتصال بالدليل الصوتي على متن القارب باستخدام هاتفك الخاص.",
+  "headphones": "لا تملك سماعات؟ يمكنك شراء زوج منها على متن القارب مقابل €0.50 – €1.00.",
   "chooseLang": "اختر لغتك",
   "appName": "الدليل الصوتي",
   "byod": "أحضر جهازك الخاص (BYOD)",
@@ -406,6 +462,9 @@ const STRINGS = {
   "onBoardNote": "توجد رموز QR هذه على متن القارب — امسحها هناك."
  },
  "he": {
+  "noticeTitle": "אלו הוראות — לא המדריך הקולי עצמו",
+  "noticeBody": "דף זה מסביר כיצד להתחבר למדריך הקולי בספינה באמצעות הטלפון שלכם.",
+  "headphones": "אין לכם אוזניות? ניתן לרכוש זוג בספינה תמורת €0.50 – €1.00.",
   "chooseLang": "בחרו את השפה",
   "appName": "מדריך קולי",
   "byod": "הביאו את המכשיר שלכם (BYOD)",
@@ -422,6 +481,9 @@ const STRINGS = {
   "onBoardNote": "קודי ה-QR האלה נמצאים בספינה — סרקו אותם שם."
  },
  "pl": {
+  "noticeTitle": "To jest instrukcja — nie sam przewodnik audio",
+  "noticeBody": "Ta strona wyjaśnia, jak połączyć się z przewodnikiem audio na pokładzie za pomocą własnego telefonu.",
+  "headphones": "Nie masz słuchawek? Kup parę na pokładzie za €0.50 – €1.00.",
   "chooseLang": "Wybierz język",
   "appName": "Przewodnik audio",
   "byod": "Skorzystaj z własnego urządzenia (BYOD)",
@@ -438,6 +500,9 @@ const STRINGS = {
   "onBoardNote": "Te kody QR znajdują się na pokładzie — zeskanuj je tam."
  },
  "id": {
+  "noticeTitle": "Ini adalah petunjuk — bukan pemandu audionya",
+  "noticeBody": "Halaman ini menjelaskan cara menghubungkan pemandu audio di kapal menggunakan ponsel Anda sendiri.",
+  "headphones": "Tidak punya earphone? Beli sepasang di kapal seharga €0.50 – €1.00.",
   "chooseLang": "Pilih bahasa Anda",
   "appName": "Pemandu Audio",
   "byod": "Bawa Perangkat Anda Sendiri (BYOD)",
@@ -454,6 +519,9 @@ const STRINGS = {
   "onBoardNote": "Kode QR ini ada di kapal — pindai di sana."
  },
  "hi": {
+  "noticeTitle": "ये निर्देश हैं — ऑडियो गाइड नहीं",
+  "noticeBody": "यह पृष्ठ बताता है कि नाव पर लगे ऑडियो गाइड से अपने फ़ोन से कैसे जुड़ें।",
+  "headphones": "ईयरफ़ोन नहीं हैं? नाव पर €0.50 – €1.00 में एक जोड़ी खरीदें।",
   "chooseLang": "अपनी भाषा चुनें",
   "appName": "ऑडियो गाइड",
   "byod": "अपना उपकरण लाएँ (BYOD)",
